@@ -2,7 +2,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import threading
 from Node import Node
-
+import time
 
 # Define the nodes and edges of the network
 nodes = [ 1,2,3, 4, 5,6,7,8]
@@ -94,3 +94,18 @@ t8.start()
 #t2.daemon = True
 #t2.start()
 node3.zmqWrite("Bonjour",12345,node3.ports)
+time.sleep(7)
+print("nodes : [", flush=True)
+node1.ToString()
+node2.ToString()
+node3.ToString()
+node4.ToString()
+node5.ToString()
+node6.ToString()
+node7.ToString()
+node8.ToString()
+
+print("]", flush=True)
+
+
+print("end of program")
